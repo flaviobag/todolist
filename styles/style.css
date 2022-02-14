@@ -1,2 +1,25 @@
 @import "reset.css";
 @import "variables.css";
+
+.cabecalho {
+    text-align: center;
+}
+
+.corpo {
+    background-color: var(--light-blue);
+}
+
+.main-card {
+    border-color: var(--black);   
+    border-radius: 8px; 
+    border: solid;
+    margin: 1rem;
+    align-items: center;
+    
+}
+
+.cartoes {
+    justify-content: center;
+    width: 500px;
+    height: 250px;
+}
