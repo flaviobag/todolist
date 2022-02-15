@@ -1,18 +1,36 @@
 @import "reset.css";
 @import "variables.css";
 
-.cabecalho {
-    text-align: center;
+* {
+    font-family: 'Quicksand', sans-serif;
 }
 
 body {
     background-color: var(--light-blue);
+    margin: auto;
+    padding: 100px 0 100px 0;
+}
+
+.header {
+    background: var(--purple);
+    border-radius: 8px 8px 100% 100%;
+    color: var(--white);
+    text-align: center;
+
+}
+.header h1{
+    font-size: 2.5rem;
+}
+.header h2 {
+    font-size: 1.25rem;
+    padding-bottom: 1rem;
 }
 
 .main-card {
 	height:auto;
-	width: 400px;
-    background-color:#ffffff;
+	width: 400px;    
+    background-color: var(--white);
     border-radius: 8px;
-    margin:auto;
+    margin: auto;
+    padding-bottom: 10px;
 }
