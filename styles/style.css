@@ -1,14 +1,10 @@
 @import "reset.css";
 @import "variables.css";
 
-* {
-    font-family: 'Quicksand', sans-serif;
-}
-
 body {
     background-color: var(--light-blue);
-    margin: auto;
-    padding: 100px 0 100px 0;
+    display: flex;
+    justify-content:center;    
 }
 
 .header {
@@ -16,12 +12,14 @@ body {
     border-radius: 8px 8px 100% 100%;
     color: var(--white);
     text-align: center;
-
+    text-decoration: none;
 }
-.header h1{
+
+.header__title{
     font-size: 2.5rem;
 }
-.header h2 {
+
+.header__title--second {
     font-size: 1.25rem;
     padding-bottom: 1rem;
 }
@@ -31,6 +29,5 @@ body {
 	width: 400px;    
     background-color: var(--white);
     border-radius: 8px;
-    margin: auto;
-    padding-bottom: 10px;
+    min-width: 400px;    
 }
