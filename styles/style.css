@@ -1,10 +1,13 @@
 @import "reset.css";
 @import "variables.css";
 
-body {
+
+.xuxu {
+    align-items: center;
     background-color: var(--light-blue);
     display: flex;
-    justify-content:center;    
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .header {
@@ -19,7 +22,7 @@ body {
     font-size: 2.5rem;
 }
 
-.header__title--second {
+.header__subtitle {
     font-size: 1.25rem;
     padding-bottom: 1rem;
 }
