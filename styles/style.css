@@ -1,14 +1,15 @@
 @import "reset.css";
 @import "variables.css";
 
-
+body {
+    font-family: var(--primary-font);
+}
 .container {
     align-items: center;
     background-color: var(--light-blue);
     display: flex;
     justify-content: center;
     min-height: 100vh;
-    font-family: 'Quicksand', sans-serif;
 }
 
 .header {
@@ -17,6 +18,8 @@
     color: var(--white);
     text-align: center;
     text-decoration: none;
+    font-family: var(--secondary-font);
+    padding-bottom: 0.5rem;
 }
 
 .header__title {
@@ -26,36 +29,52 @@
 
 .header__subtitle {
     font-size: 1.25rem;
-    padding-bottom: 1rem;
     font-weight: normal;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
 }
 
 .main-card {
 	width: 400px;    
     background-color: var(--white);
     border-radius: 8px;
-    min-width: 400px;    
     display: block;
     justify-content: center;
+    min-width: 400px;    
 }
 
-.add__btn {
-    border-radius: 100%;
-    width: 50px;
-    height: 50px;
-    color: var(--white);
+.button {
     background-color: var(--pink);
+    border-radius: 100%;
     border: none;
+    color: var(--white);
     font-size: 1.8rem;
+    height: 50px;
+    margin-bottom: 5rem;
+    position:absolute;
+    width: 50px;
+    top:50%;
+    
 }
 
-.add__description {
-    display: flex;
-    margin: 0 auto;
+.input {
+    background-color: var(--off-white);
+    border: none;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
-    z-index: 2;
-    width: 43.5vh;
+    display: flex;
+    font-family: inherit;
+    font-size: 1.25rem;
+    margin-top: 1.8rem;
+    position: relative;    
     text-align: center;
+    width: 100%;
+    min-width: 300px;
+    margin-bottom: 1rem;
+    outline: none;
 }
 
-
+.form {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
