@@ -1,7 +1,9 @@
 @import "reset.css";
 @import "variables.css";
 
-
+body {
+    font-family: var(--primary-font);
+}
 .container {
     align-items: center;
     background-color: var(--light-blue);
@@ -14,6 +16,8 @@
     background: var(--purple);
     border-radius: 8px 8px 100% 100%;
     color: var(--white);
+    font-family: var(--secondary-font);
+    padding-bottom: 0.5rem;
     text-align: center;
     text-decoration: none;
 }
@@ -25,13 +29,52 @@
 
 .header__subtitle {
     font-size: 1.25rem;
-    padding-bottom: 1rem;
     font-weight: normal;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
 }
 
 .main-card {
-	width: 400px;    
-    background-color: var(--white);
+	background-color: var(--white);
     border-radius: 8px;
-    min-width: 400px;    
+    display: block;
+    justify-content: center;
+    min-width: 400px;  
+    width: 400px;    
+}
+
+.button {
+    background-color: var(--pink);
+    border-radius: 100%;
+    border: none;
+    color: var(--off-white);
+    font-family: inherit;    
+    font-size: 2rem;
+    height: 50px;
+    margin-bottom: 5rem;
+    position:absolute;
+    top:50%;
+    width: 50px;
+}
+
+.input {
+    background-color: var(--off-white);
+    border: none;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+    display: flex;
+    font-family: inherit;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    margin-top: 1.8rem;
+    min-width: 300px;
+    outline: none;
+    position: relative;    
+    text-align: center;
+    width: 100%;
+}
+
+.form {
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }

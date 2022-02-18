@@ -3,5 +3,9 @@
     --light-blue: #CAD6E5;
     --black: #000000;
     --white: #ffffff;
+    --off-white:#f7f7f7;
     --purple: rgba(131, 56, 236, 0.8);
+    --pink:#FF006E;
+    --primary-font:'Quicksand', sans-serif;
+    --secondary-font:'Montserrat Alternates', Arial, sans-serif;
 }
