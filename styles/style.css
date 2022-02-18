@@ -16,10 +16,10 @@ body {
     background: var(--purple);
     border-radius: 8px 8px 100% 100%;
     color: var(--white);
-    text-align: center;
-    text-decoration: none;
     font-family: var(--secondary-font);
     padding-bottom: 0.5rem;
+    text-align: center;
+    text-decoration: none;
 }
 
 .header__title {
@@ -35,26 +35,26 @@ body {
 }
 
 .main-card {
-	width: 400px;    
-    background-color: var(--white);
+	background-color: var(--white);
     border-radius: 8px;
     display: block;
     justify-content: center;
-    min-width: 400px;    
+    min-width: 400px;  
+    width: 400px;    
 }
 
 .button {
     background-color: var(--pink);
     border-radius: 100%;
     border: none;
-    color: var(--white);
-    font-size: 1.8rem;
+    color: var(--off-white);
+    font-family: inherit;    
+    font-size: 2rem;
     height: 50px;
     margin-bottom: 5rem;
     position:absolute;
-    width: 50px;
     top:50%;
-    
+    width: 50px;
 }
 
 .input {
@@ -64,13 +64,13 @@ body {
     display: flex;
     font-family: inherit;
     font-size: 1.25rem;
+    margin-bottom: 1rem;
     margin-top: 1.8rem;
+    min-width: 300px;
+    outline: none;
     position: relative;    
     text-align: center;
     width: 100%;
-    min-width: 300px;
-    margin-bottom: 1rem;
-    outline: none;
 }
 
 .form {
