@@ -96,9 +96,15 @@ body {
 
 .del__button {
     background-color: none;
+    display: none;
+}
+
+.card:hover .del__button {
+    display: flex;
 }
 
 .image {
     width: 15px;
     height: 15px;
 }
+
