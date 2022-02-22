@@ -80,7 +80,7 @@ body {
 
 .cards {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
 }
 
 .card {
@@ -88,22 +88,22 @@ body {
     background-color: var(--purple);
     color: var(--off-white);
     width:170px;
-	height:170px;
-    padding: 15px;
-	margin:10px;
+	min-height:170px;
+    padding: 0.938rem;
+	margin: 0.625rem;
     list-style: none;
 }
 
-.del__button {
+.button__del {
     background-color: none;
     display: none;
 }
 
-.card:hover .del__button {
+.card:hover .button__del {
     display: flex;
 }
 
-.image {
+.button-del__image {
     width: 15px;
     height: 15px;
 }
