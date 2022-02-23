@@ -23,6 +23,7 @@ body {
 }
 
 .header__title {
+    padding-top: 1.5rem;
     font-size: 2.5rem;
     font-weight: normal;
 }
@@ -53,7 +54,6 @@ body {
     height: 50px;
     margin-bottom: 5rem;
     position:absolute;
-    top:50%;
     width: 50px;
 }
 
@@ -78,3 +78,54 @@ body {
     display: flex;
     justify-content: center;
 }
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    justify-items: center;
+}
+
+.card {
+	margin: 0.625rem;
+	min-height:170px;
+    background-color: var(--purple);
+    border-radius: 8px;
+    color: var(--off-white);
+    list-style: none;
+    padding: 0.938rem;
+    width:170px;
+    position: relative;
+}
+
+.checkbox {
+    display: none;
+}
+
+.card__label {
+    cursor: pointer;
+}
+
+.checkbox:checked + .card__label {
+    text-decoration: line-through;
+}
+
+.button-del {
+    background-color: transparent;
+    border: none;
+    bottom: 4px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 4px;
+}
+
+.card:hover .button-del {
+    display: block;
+}
+
+.button-del__image {
+    height: 15px;
+    width: 15px;
+}
+
