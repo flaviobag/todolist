@@ -73,6 +73,18 @@ body {
     width: 100%;
 }
 
+.sub__btn {
+    display: flex;
+    background: transparent;
+    border: none;
+}
+
+.button-sub__image {
+    width: 20px;
+    height: 20px;
+    
+}
+
 .form {
     align-items: center;
     display: flex;
