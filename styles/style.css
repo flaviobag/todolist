@@ -18,8 +18,10 @@ body {
     color: var(--white);
     font-family: var(--secondary-font);
     padding-bottom: 0.5rem;
+    position: relative;
     text-align: center;
     text-decoration: none;
+
 }
 
 .header__title {
@@ -49,19 +51,28 @@ body {
     border-radius: 100%;
     border: none;
     color: var(--off-white);
+    cursor: pointer;
     font-family: inherit;    
     font-size: 2rem;
     height: 50px;
     margin-bottom: 5rem;
     position:absolute;
     width: 50px;
+    top: 70%;
+    left: calc(50% - 25px);
 }
+
 .field {
     align-items: center;
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
     margin-top: 1.8rem;
+
+}
+
+.field--hidden {
+    display: none;
 }
 
 .field__input {
@@ -94,6 +105,7 @@ body {
     align-items: center;
     display: flex;
     justify-content: center;
+    
 }
 
 .cards {

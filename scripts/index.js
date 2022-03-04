@@ -6,6 +6,19 @@
 
         title.innerText = date
     }
+    const openField = () =>{
+        const button = document.querySelector('[data-button]')
+        const field = document.querySelector('[data-field]')
 
+        button.addEventListener('click', (e) => {
+            field.classList.toggle('field--hidden')
+                if (e.target.innerText === '+') {
+                    button.innerText = '-'
+                } else {
+                    button.innerText = '+'
+                }    
+        })
+    }
     setTodayDate()
+    openField()
 })()
