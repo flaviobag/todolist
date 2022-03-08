@@ -18,28 +18,48 @@
                     button.innerText = '+'
                 }    
         })
-        
+    
     }
+    const removeItem = (index) => {
+        const card = document.querySelector(`[data-card="${index}"`)
+        card.remove()
+
+    }
+    const createItem = (value, index, container) => {
+        const card = document.createElement('li')
+        card.classList.add('card')
+        card.setAttribute('data-card', index)
+        
+        const button = document.createElement('button')
+        button.setAttribute('type','button')
+        button.classList.add('button-del')
+        button.addEventListener('click', () => removeItem(index))
+        button.innerHTML = '<img class="button-del__image" src="delete.png" alt="deletar"></img>'
+        
+        card.innerHTML = `
+            <input class="checkbox" type="checkbox" id="item-${index}"/>
+            <label for="item-${index}" class="card__label">${value}</label>
+        `
+        card.appendChild(button)
+        
+        container.appendChild(card)
+    }
+
     const initForm = () => {
         const input = document.querySelector('[data-input]')
         const list = document.querySelector('[data-list]')
         const form = document.querySelector('[data-form]')
+        let counter = 0
+
 
         form.addEventListener('submit', (e) => {
             e.preventDefault()
             
-            const card = document.createElement('li')
-            card.classList.add('card')
-            card.innerHTML = `
-                <input class="checkbox" type="checkbox" id="item-${input.value}"/>
-                <label class="card__label" for="item-${input.value}"> ${input.value} 
-                <button class="button-del" type="button"><img class="button-del__image" src="delete.png" alt="deletar"></button>
-                </label>
-            `
-            
-            list.appendChild(card)
+            createItem(input.value, counter, list)
+            counter++
         })  
     }
+    
     initForm()
     setTodayDate()
     openField()
