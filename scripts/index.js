@@ -20,9 +20,18 @@
         })
     
     }
+    const setCounter = () =>{
+        const container = document.querySelector('[data-list]')
+        const counter = document.querySelector('[data-counter]')
+        const quantity = container.childNodes.length
+        console.log(quantity, container)
+
+        counter.innerText = quantity
+    }
     const removeItem = (index) => {
         const card = document.querySelector(`[data-card="${index}"`)
         card.remove()
+        setCounter()
 
     }
     const createItem = (value, index, container) => {
@@ -33,7 +42,7 @@
         const button = document.createElement('button')
         button.setAttribute('type','button')
         button.classList.add('button-del')
-        button.addEventListener('click', () => removeItem(index))
+        button.addEventListener('click', () =>removeItem(index))
         button.innerHTML = '<img class="button-del__image" src="delete.png" alt="deletar"></img>'
         
         card.innerHTML = `
@@ -57,9 +66,11 @@
             
             createItem(input.value, counter, list)
             counter++
+            setCounter()
         })  
+        setCounter()
     }
-    
+   
     initForm()
     setTodayDate()
     openField()
