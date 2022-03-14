@@ -1,10 +1,23 @@
 
-(function (){    
-    const setTodayDate = () => {
-        const date = new Date().toDateString()
+(function (){
+    const setTodayDate = (date) => {
         const title = document.querySelector('[data-title]')
 
-        title.innerText = date
+        title.innerText = date.toDateString()
+    }
+    const setGreeting = (date) => {
+        const greeting = document.querySelector('[data-greeting]')
+
+        const hour = date.getHours()
+
+        if (hour >= 4 && hour <= 11) {
+            greeting.innerText = "Good morning!! "
+        } else if (hour >= 12 && hour <= 18) {
+            greeting.innerText = "Good Afternoon!! "
+        } else {
+            greeting.innerText = "Good Evening!! "
+        }
+                
     }
     const openField = () =>{
         const button = document.querySelector('[data-button]')
@@ -20,11 +33,11 @@
         })
     
     }
+    
     const setCounter = () =>{
         const container = document.querySelector('[data-list]')
         const counter = document.querySelector('[data-counter]')
         const quantity = container.childNodes.length
-        console.log(quantity, container)
 
         counter.innerText = quantity
     }
@@ -70,8 +83,10 @@
         })  
         setCounter()
     }
-   
+    const date = new Date()
+       
     initForm()
-    setTodayDate()
+    setGreeting(date)
+    setTodayDate(date)
     openField()
 })()
