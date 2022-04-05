@@ -1,5 +1,31 @@
 
 (function (){
+
+    const getItems = async (url) => {
+        const response = await fetch(url)
+        const data = await response.json()
+        return data
+
+    }
+    const postItem = async (url, item) => {
+        const response = await fetch(url, {
+            headers:{
+                'Content-Type': 'application/json'
+            }, 
+            method: 'POST',
+            body: JSON.stringify(item)
+        })
+        const data = await response.json()
+        return data
+    }
+    const deleteItem = async (url, id) => {
+        const response = await fetch(`${url}/${id}`, {
+            headers:{
+                'Content-Type': 'application/json'
+            }, 
+            method: 'DELETE'})
+        console.log(response)
+    }
     const setTodayDate = (date) => {
         const title = document.querySelector('[data-title]')
 
@@ -43,7 +69,9 @@
     }
     const removeItem = (index) => {
         const card = document.querySelector(`[data-card="${index}"`)
+        const url = 'http://localhost:3000/items'
         card.remove()
+        deleteItem(url, index)
         setCounter()
 
     }
@@ -67,18 +95,21 @@
         container.appendChild(card)
     }
 
-    const initForm = () => {
+    const initForm = async () => {
+        const url = 'http://localhost:3000/items'
+        const items = await getItems(url)
         const input = document.querySelector('[data-input]')
         const list = document.querySelector('[data-list]')
         const form = document.querySelector('[data-form]')
         let counter = 0
 
-
-        form.addEventListener('submit', (e) => {
+        items.forEach(({title, id}) => {
+            createItem(title, id, list)           
+        })
+        form.addEventListener('submit', async (e) => {
             e.preventDefault()
-            
-            createItem(input.value, counter, list)
-            counter++
+            const item = await postItem(url, {title: input.value})
+            createItem(item.title, item.id, list)
             setCounter()
         })  
         setCounter()
